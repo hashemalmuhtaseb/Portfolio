@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Northcut Barbers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Karla:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#141414;--panel:#1d1d1d;--ink:#ece6da;--muted:#a9a296;--brass:#c08a3e;--line:#2f2d2a;
+  --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--sans:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 var(--sans);padding-inline:16px}
+.wrap{max-width:62rem;margin-inline:auto}
+a{color:var(--brass)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.demo{background:var(--brass);color:#141414;font-size:.82rem;text-align:center;padding:.5rem 1rem;margin-inline:-16px;font-weight:600}
+.demo a{color:#141414}
+header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1.2rem;border-bottom:1px solid var(--line)}
+.logo{font:900 1.7rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:1.1rem;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-weight:600}nav a:hover{color:var(--ink)}
+h1,h2{font-family:var(--disp);font-weight:900;text-transform:uppercase;line-height:.95;margin:0;letter-spacing:.01em;text-wrap:balance}
+h1{font-size:clamp(3.2rem,12vw,7.5rem)}h1 span{color:var(--brass)}
+h2{font-size:clamp(2rem,6vw,3.2rem)}
+p{margin:0;max-width:58ch}
+.pole{height:10px;background:repeating-linear-gradient(-45deg,#b33a32 0 12px,#ece6da 12px 24px,#2c4f8a 24px 36px,#ece6da 36px 48px);border-radius:5px;max-width:100%}
+.hero{display:grid;gap:1.4rem;padding-block:3rem 3.5rem}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{padding:.9rem 1.4rem;font-weight:700;text-decoration:none;border:2px solid var(--brass);text-transform:uppercase;letter-spacing:.06em;font-size:.9rem}
+.btn.p{background:var(--brass);color:#141414}.btn.g{color:var(--brass)}
+.facts{display:flex;gap:2rem;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
+.facts b{display:block;color:var(--ink);font:700 1.6rem/1 var(--disp);letter-spacing:.03em}
+section{padding-block:3rem;border-top:1px solid var(--line);display:grid;gap:1.6rem}
+.prices{display:grid;gap:0}
+.row{display:grid;grid-template-columns:1fr auto auto;gap:1rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.row small{display:block;color:var(--muted);font-size:.88rem}
+.row .min{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.row .gbp{font:700 1.5rem/1 var(--disp);color:var(--brass);font-variant-numeric:tabular-nums;min-width:3.2rem;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1.4rem}
+.panel{background:var(--panel);border:1px solid var(--line);padding:1.4rem;display:grid;gap:.75rem;align-content:start}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}td{padding:.3rem 0}td:last-child{text-align:right}
+tr.today td{color:var(--brass);font-weight:700}
+form{display:grid;gap:.8rem}
+label{font-weight:600;font-size:.9rem;display:grid;gap:.3rem}
+select,input{font:inherit;padding:.6rem .7rem;border:1px solid var(--line);background:#101010;color:var(--ink)}
+button{font:700 .95rem var(--sans);padding:.85rem;border:0;background:var(--brass);color:#141414;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+.note{color:var(--brass);font-weight:600;font-size:.9rem}
+[hidden]{display:none!important}
+.phone{font:700 1.8rem/1 var(--disp);letter-spacing:.04em;color:var(--ink)}
+footer{padding-block:2rem 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="demo">Concept website by <a href="../index.html">Hashem Almuhtaseb</a>. Northcut is a fictional barber shop.</div>
+<header><a class="logo" href="#">Northcut</a><nav><a href="#prices">Prices</a><a href="#hours">Hours</a><a href="#book">Book</a></nav></header>
+
+<div class="hero">
+  <div class="pole" aria-hidden="true"></div>
+  <h1>Sharp cuts.<br><span>No waiting around.</span></h1>
+  <p>Skin fades, classic scissor cuts and hot-towel shaves in Reading. Book a chair online or walk in, Monday to Saturday.</p>
+  <div class="btns"><a class="btn p" href="#book">Book a chair</a><a class="btn g" href="#prices">See prices</a></div>
+  <div class="facts"><span><b>3</b>barbers</span><span><b>7 days</b>open</span><span><b>Walk-ins</b>welcome until 5pm</span></div>
+</div>
+
+<section id="prices">
+  <h2>Prices</h2>
+  <div class="prices">
+    <div class="row"><span>Haircut <small>Scissor or clipper, wash and style</small></span><span class="min">30 min</span><span class="gbp">£18</span></div>
+    <div class="row"><span>Skin fade <small>Foil-finish fade with styling</small></span><span class="min">40 min</span><span class="gbp">£22</span></div>
+    <div class="row"><span>Beard trim &amp; shape <small>Hot towel and line-up</small></span><span class="min">20 min</span><span class="gbp">£12</span></div>
+    <div class="row"><span>Cut &amp; beard</span><span class="min">50 min</span><span class="gbp">£28</span></div>
+    <div class="row"><span>Hot-towel shave</span><span class="min">30 min</span><span class="gbp">£20</span></div>
+    <div class="row"><span>Under 12s <small>Mon–Fri only</small></span><span class="min">25 min</span><span class="gbp">£13</span></div>
+  </div>
+</section>
+
+<section id="hours">
+  <h2>Hours &amp; find us</h2>
+  <div class="grid">
+    <div class="panel"><strong>Opening hours</strong>
+      <table id="ht"><tr><td>Monday</td><td>9:00 – 18:00</td></tr><tr><td>Tuesday</td><td>9:00 – 18:00</td></tr><tr><td>Wednesday</td><td>9:00 – 18:00</td></tr><tr><td>Thursday</td><td>9:00 – 20:00</td></tr><tr><td>Friday</td><td>9:00 – 20:00</td></tr><tr><td>Saturday</td><td>8:30 – 17:00</td></tr><tr><td>Sunday</td><td>10:00 – 16:00</td></tr></table></div>
+    <div class="panel"><strong>Call the shop</strong><span class="phone">0118 000 0000</span><p style="color:var(--muted)">Example number. On a real site this is a tap-to-call button, and the address links straight to Google Maps.</p></div>
+  </div>
+</section>
+
+<section id="book">
+  <h2>Book a chair</h2>
+  <div class="grid">
+    <form class="panel" id="f">
+      <label for="svc">Service<select id="svc"><option>Haircut · £18</option><option>Skin fade · £22</option><option>Beard trim &amp; shape · £12</option><option>Cut &amp; beard · £28</option><option>Hot-towel shave · £20</option></select></label>
+      <label for="day">Day<select id="day"><option>Today</option><option>Tomorrow</option><option>This Saturday</option></select></label>
+      <label for="slot">Time<select id="slot"><option>10:00</option><option>11:30</option><option>13:00</option><option>15:30</option><option>17:00</option></select></label>
+      <label for="nm">Your name<input id="nm" required placeholder="e.g. Jordan"></label>
+      <button type="submit">Confirm booking</button>
+      <p class="note" id="msg" hidden>This is a demo, so no booking was made. A real site connects to a booking app such as Fresha or Booksy.</p>
+    </form>
+    <div class="panel"><strong>Walk-ins</strong><p>No booking needed. Walk-ins are taken until 5pm on weekdays. Booked customers are seen first.</p></div>
+  </div>
+</section>
+<footer>Northcut (fictional) · Concept site designed by <a href="../index.html">Hashem Almuhtaseb</a></footer>
+</div>
+<script>
+var i=(new Date().getDay()+6)%7,r=document.querySelectorAll('#ht tr');if(r[i])r[i].className='today';
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').hidden=false});
+</script>
+</body>
+</html>
