@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Freelance web design for Reading cafés, barbers, salons, shops and tradespeople.">
+<title>Hashem Almuhtaseb Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,500..800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f6f4f2; --surface:#ffffff; --ink:#1d1f24; --muted:#5d6068; --line:#dcd8d4;
+  --brick:#a8352a; --brick-ink:#ffffff; --slate:#3c4a5c; --ok:#2f7a4f; --bad:#b23a2e;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#16181c; --surface:#1f2228; --ink:#eceae6; --muted:#a3a6ad; --line:#33363d;
+  --brick:#e0665a; --brick-ink:#16181c; --slate:#9fb2c9; --ok:#6cc392; --bad:#ef7d72; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);padding-inline:clamp(16px,4vw,40px)}
+.wrap{max-width:68rem;margin-inline:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-stretch:125%;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6.5vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:750}
+h3{font-size:1.15rem;font-weight:700;font-stretch:112%}
+p{margin:0;max-width:62ch}
+.label{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1.25rem;border-bottom:1px solid var(--line)}
+.mark{font:800 1rem/1 var(--display);font-stretch:125%;text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.brick{display:grid;grid-template-columns:repeat(3,7px);gap:2px}
+.brick i{height:5px;background:var(--brick)}.brick i:nth-child(2n){background:var(--slate)}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:600}
+nav ul a:hover{color:var(--ink)}
+section{padding-block:clamp(3rem,7vw,5.5rem);border-bottom:1px solid var(--line);display:grid;gap:2rem}
+.hero{gap:1.6rem}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.lede{font-size:1.25rem;color:var(--muted)}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.3rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--brick)}
+.btn.primary{background:var(--brick);color:var(--brick-ink)}
+.btn.ghost{color:var(--brick)}
+.btn:hover{filter:brightness(1.08)}
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:1.5rem}
+.shot{display:grid;gap:1rem;text-decoration:none;min-width:0}
+.browser{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);transition:transform .25s ease}
+.shot:hover .browser{transform:translateY(-4px)}
+.bar{display:flex;gap:6px;align-items:center;padding:.55rem .8rem;border-bottom:1px solid var(--line)}
+.bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.bar span{margin-left:.6rem;font:500 .72rem var(--mono);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini{aspect-ratio:16/10;max-width:100%;padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+.mini.cafe{background:#eef2ea;color:#22261f}
+.mini.cafe b{font:400 clamp(1.4rem,3.5vw,2rem)/1.05 Georgia,serif;color:#2f5d46}
+.mini.barber{background:#141414;color:#ece6da}
+.mini.barber b{font:800 clamp(1.4rem,3.5vw,2rem)/1 var(--display);font-stretch:112%;text-transform:uppercase;letter-spacing:.04em}
+.mini .rows{display:grid;gap:5px}
+.mini .rows i{height:6px;border-radius:3px;background:currentColor;opacity:.18}
+.mini .rows i:nth-child(1){width:70%}.mini .rows i:nth-child(2){width:55%}.mini .rows i:nth-child(3){width:62%}
+.mini .pill{align-self:flex-start;font:600 .75rem var(--body);padding:.4rem .8rem;border-radius:999px}
+.cafe .pill{background:#2f5d46;color:#fff}.barber .pill{background:#c08a3e;color:#141414}
+.shot p{color:var(--muted)}
+.tagrow{display:flex;gap:.5rem;flex-wrap:wrap}
+.tag{font:500 .72rem var(--mono);padding:.3rem .55rem;border:1px solid var(--line);border-radius:4px;color:var(--muted)}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:0;border-top:1px solid var(--line)}
+.check{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;padding:1.2rem 0;border-bottom:1px solid var(--line);padding-right:1.5rem;min-width:0}
+.check .st{font:500 .72rem var(--mono);grid-row:span 2;padding-top:.2rem;white-space:nowrap}
+.check .st s{color:var(--bad);text-decoration:none}.check .st u{color:var(--ok);text-decoration:none}
+.check p{color:var(--muted);font-size:.98rem}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1.25rem}
+.pack{border:1px solid var(--line);border-radius:10px;padding:1.5rem;display:grid;gap:.9rem;align-content:start;background:var(--surface)}
+.pack.feat{border:2px solid var(--brick)}
+.price{font:800 2.2rem/1 var(--display);font-stretch:112%;font-variant-numeric:tabular-nums}
+.price small{font:500 .8rem var(--mono);color:var(--muted);margin-right:.35rem;letter-spacing:.06em;text-transform:uppercase}
+.pack ul{margin:0;padding-left:1.1rem;display:grid;gap:.3rem;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:1.5rem;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{display:grid;gap:.5rem;counter-increment:s;align-content:start}
+.steps li::before{content:counter(s);font:800 2.6rem/1 var(--display);font-stretch:125%;color:var(--brick)}
+.steps p{color:var(--muted);font-size:.98rem}
+.contact{border-bottom:0}
+.mailbox{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:8px;background:var(--surface);max-width:max-content;min-width:0}
+.mailbox a{font:500 clamp(.85rem,2.4vw,1.05rem) var(--mono);word-break:break-all;color:var(--brick)}
+.mailbox button{font:600 .9rem var(--body);padding:.5rem .9rem;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+footer{padding-block:2rem 3rem;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="mark" href="#top"><span class="brick" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>Hashem Almuhtaseb</a>
+  <ul><li><a href="#work">Work</a></li><li><a href="#checks">What I fix</a></li><li><a href="#prices">Prices</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<section class="hero" id="top">
+  <span class="label">Freelance web design · Reading, Berkshire</span>
+  <h1>Websites that bring customers <em>through the door</em>.</h1>
+  <p class="lede">I build fast, mobile-friendly websites for Reading's cafés, barbers, salons, shops and tradespeople, and fix the ones that have stopped working.</p>
+  <div class="btns"><a class="btn primary" href="#contact">Get a free website check</a><a class="btn ghost" href="#work">See sample work</a></div>
+</section>
+
+<section id="work">
+  <div style="display:grid;gap:.6rem"><span class="label">Sample work</span><h2>Two concept sites</h2>
+  <p>Built to show what a small local business can have online. Both businesses are fictional; open them on your phone to see how they adapt.</p></div>
+  <div class="work">
+    <a class="shot" href="cafe/index.html">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>emberandoat.cafe</span></div>
+        <div class="mini cafe"><b>Ember &amp; Oat</b><div class="rows"><i></i><i></i><i></i></div><span class="pill">Order ahead</span></div></div>
+      <h3>Ember &amp; Oat · neighbourhood café</h3>
+      <p>Full menu with prices, opening hours, find-us details and an order-ahead button that works on a phone.</p>
+      <div class="tagrow"><span class="tag">Menu</span><span class="tag">Hours</span><span class="tag">Order ahead</span></div>
+    </a>
+    <a class="shot" href="barber/index.html">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>northcutbarbers.co.uk</span></div>
+        <div class="mini barber"><b>Northcut</b><div class="rows"><i></i><i></i><i></i></div><span class="pill">Book a chair</span></div></div>
+      <h3>Northcut · barber shop</h3>
+      <p>Price list with appointment lengths, a simple booking form, walk-in times and a tap-to-call number.</p>
+      <div class="tagrow"><span class="tag">Prices</span><span class="tag">Booking</span><span class="tag">Walk-ins</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="checks">
+  <div style="display:grid;gap:.6rem"><span class="label">The free website check</span><h2>What I look for on every site</h2>
+  <p>These are the problems I see most often on local business websites in Reading. Each one costs bookings and calls.</p></div>
+  <div class="checks">
+    <div class="check"><span class="st"><s>✕</s> → <u>✓</u></span><h3>The site loads</h3><p>Expired domains and dead links from Google, Yell or Visit Reading send customers to an error page, or to someone else's site.</p></div>
+    <div class="check"><span class="st"><s>✕</s> → <u>✓</u></span><h3>Works on a phone</h3><p>Most people search on their phone. Tiny text and sideways scrolling make them give up and pick the next result.</p></div>
+    <div class="check"><span class="st"><s>✕</s> → <u>✓</u></span><h3>Shows the padlock</h3><p>Without a security certificate, browsers label your site "Not secure", and Google ranks it lower.</p></div>
+    <div class="check"><span class="st"><s>✕</s> → <u>✓</u></span><h3>Hours and prices are clear</h3><p>Opening times and a price list are the two things customers check before they visit or call.</p></div>
+    <div class="check"><span class="st"><s>✕</s> → <u>✓</u></span><h3>Easy to book or call</h3><p>A booking button or tap-to-call number on every page, not hidden on a contact page.</p></div>
+    <div class="check"><span class="st"><s>✕</s> → <u>✓</u></span><h3>Up to date</h3><p>Old copyright years, dead social links and closed platforms like Google+ make a business look closed.</p></div>
+  </div>
+</section>
+
+<section id="prices">
+  <div style="display:grid;gap:.6rem"><span class="label">Prices</span><h2>Simple, fixed prices</h2>
+  <p>You get a quote before any work starts. You own your domain and your website.</p></div>
+  <div class="packs">
+    <div class="pack"><h3>Fix &amp; refresh</h3><div class="price"><small>from</small>£99</div><ul><li>Fix broken pages and links</li><li>Add the padlock (HTTPS)</li><li>Update hours, prices and contact details</li></ul></div>
+    <div class="pack feat"><h3>One-page site</h3><div class="price"><small>from</small>£249</div><ul><li>Everything on one fast, mobile-first page</li><li>Menu or price list, hours, map link</li><li>Booking, ordering or call button</li><li>Live within a week</li></ul></div>
+    <div class="pack"><h3>Small business site</h3><div class="price"><small>from</small>£499</div><ul><li>Up to 5 pages</li><li>Gallery, services and FAQs</li><li>Set up on Google so people can find you</li><li>One month of free changes</li></ul></div>
+  </div>
+</section>
+
+<section id="how">
+  <div style="display:grid;gap:.6rem"><span class="label">How it works</span><h2>From first chat to live site</h2></div>
+  <ol class="steps">
+    <li><h3>Free check</h3><p>I review your current site, or your Google and social listings if you don't have one, and send you a short list of fixes.</p></li>
+    <li><h3>Mock-up</h3><p>I design your homepage first, free, so you can see it before you commit.</p></li>
+    <li><h3>Build</h3><p>I build the site with your real menu, prices, photos and hours.</p></li>
+    <li><h3>Go live</h3><p>I connect your domain, point Google and your directory listings to it, and show you how to update it.</p></li>
+  </ol>
+</section>
+
+<section class="contact" id="contact">
+  <div style="display:grid;gap:.6rem"><span class="label">Contact</span><h2>Want a free website check?</h2>
+  <p>Email me with your business name and website (or just your name if you don't have one yet). I'll reply within a day.</p></div>
+  <div class="mailbox"><a id="email" href="mailto:hashem.muhtaseb@icloud.com?subject=Free%20website%20check">hashem.muhtaseb@icloud.com</a><button id="copy" type="button">Copy email</button></div>
+</section>
+
+<footer><span>Hashem Almuhtaseb · Freelance web designer · Reading, RG1</span><span>Sample sites feature fictional businesses.</span></footer>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('email').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Ctrl+C';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)},sel)}catch(e){sel()}
+});
+</script>
+</body>
+</html>
