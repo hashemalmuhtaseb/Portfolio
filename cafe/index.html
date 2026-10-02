@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ember &amp; Oat Café</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f1f4ee;--card:#ffffff;--ink:#22261f;--muted:#5b6157;--green:#2f5d46;--mustard:#d99a2b;--line:#d6dccf;
+  --serif:"Gloock",Georgia,serif;--sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 var(--sans);padding-inline:16px}
+.wrap{max-width:62rem;margin-inline:auto}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.demo{background:var(--ink);color:#f1f4ee;font-size:.82rem;text-align:center;padding:.5rem 1rem;margin-inline:-16px}
+.demo a{color:#f1d38f}
+header{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1.2rem}
+.logo{font:400 1.6rem/1 var(--serif);color:var(--green);text-decoration:none}
+nav{display:flex;gap:1.1rem;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,8vw,5rem);color:var(--green)}
+h2{font-size:clamp(1.8rem,4.5vw,2.6rem)}
+p{margin:0;max-width:60ch}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:2rem;align-items:center;padding-block:2.5rem 3.5rem}
+.hero .txt{display:grid;gap:1.2rem}
+.open{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem}
+.open i{width:10px;height:10px;border-radius:50%;background:#3aa365}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{padding:.85rem 1.3rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--green)}
+.btn.p{background:var(--green);color:#fff}.btn.g{color:var(--green)}
+.art{aspect-ratio:1;max-width:100%;border-radius:50% 50% 12px 12px;background:radial-gradient(circle at 50% 38%,#6b4a32 0 17%,#c79a6b 17.5% 22%,#fff 22.5% 34%,transparent 34.5%),linear-gradient(160deg,#2f5d46,#4b7a5f);position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:repeating-linear-gradient(90deg,#d99a2b 0 18px,#c4871f 18px 36px);opacity:.9}
+section{padding-block:3rem;border-top:1px solid var(--line);display:grid;gap:1.6rem}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1.5rem 2.5rem}
+.menu h3{font:700 .8rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem}
+.item{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dotted var(--line)}
+.item span:last-child{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.item small{display:block;color:var(--muted);font-size:.85rem}
+.tags{font-size:.75rem;font-weight:700;color:var(--green);margin-left:.3rem}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1.5rem}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;display:grid;gap:.7rem;align-content:start}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+td{padding:.3rem 0}td:last-child{text-align:right}
+tr.today td{font-weight:700;color:var(--green)}
+form{display:grid;gap:.8rem}
+label{font-weight:600;font-size:.9rem;display:grid;gap:.3rem}
+select,input{font:inherit;padding:.6rem .7rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+button{font:700 1rem var(--sans);padding:.8rem;border-radius:999px;border:0;background:var(--green);color:#fff;cursor:pointer}
+.note{font-size:.9rem;color:var(--green);font-weight:600}
+[hidden]{display:none!important}
+footer{padding-block:2rem 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="demo">Concept website by <a href="../index.html">Hashem Almuhtaseb</a>. Ember &amp; Oat is a fictional café.</div>
+<header><a class="logo" href="#">Ember &amp; Oat</a><nav><a href="#menu">Menu</a><a href="#visit">Visit</a><a href="#order">Order ahead</a></nav></header>
+
+<div class="hero">
+  <div class="txt">
+    <span class="open" id="openNow"><i></i>Open today 7:30am – 5pm</span>
+    <h1>Good coffee, slow mornings.</h1>
+    <p>A neighbourhood café in Reading serving espresso from a local roaster, sourdough toasties and bakes made every morning.</p>
+    <div class="btns"><a class="btn p" href="#order">Order ahead</a><a class="btn g" href="#menu">See the menu</a></div>
+  </div>
+  <div class="art" role="img" aria-label="Illustration of a cup of coffee from above"></div>
+</div>
+
+<section id="menu">
+  <h2>Menu</h2>
+  <div class="menu">
+    <div><h3>Coffee</h3>
+      <div class="item"><span>Espresso</span><span>£2.40</span></div>
+      <div class="item"><span>Flat white</span><span>£3.30</span></div>
+      <div class="item"><span>Oat latte<span class="tags">VG</span></span><span>£3.60</span></div>
+      <div class="item"><span>Batch brew <small>Refills 50p</small></span><span>£2.80</span></div>
+    </div>
+    <div><h3>Breakfast · until 11:30</h3>
+      <div class="item"><span>Sourdough, butter &amp; jam<span class="tags">V</span></span><span>£3.50</span></div>
+      <div class="item"><span>Bacon &amp; egg brioche</span><span>£6.20</span></div>
+      <div class="item"><span>Overnight oats, berries<span class="tags">VG</span></span><span>£5.40</span></div>
+    </div>
+    <div><h3>Lunch &amp; bakes</h3>
+      <div class="item"><span>Cheddar &amp; leek toastie<span class="tags">V</span> <small>Add soup +£2.50</small></span><span>£7.20</span></div>
+      <div class="item"><span>Seasonal soup &amp; bread<span class="tags">VG</span></span><span>£6.50</span></div>
+      <div class="item"><span>Cardamom bun</span><span>£3.20</span></div>
+    </div>
+  </div>
+  <p style="color:var(--muted);font-size:.9rem">V vegetarian · VG vegan. Please ask about allergens before ordering.</p>
+</section>
+
+<section id="visit">
+  <h2>Visit us</h2>
+  <div class="info">
+    <div class="box"><strong>Opening hours</strong>
+      <table id="hours"><tr><td>Monday</td><td>7:30 – 17:00</td></tr><tr><td>Tuesday</td><td>7:30 – 17:00</td></tr><tr><td>Wednesday</td><td>7:30 – 17:00</td></tr><tr><td>Thursday</td><td>7:30 – 17:00</td></tr><tr><td>Friday</td><td>7:30 – 17:00</td></tr><tr><td>Saturday</td><td>8:30 – 17:00</td></tr><tr><td>Sunday</td><td>9:00 – 15:00</td></tr></table></div>
+    <div class="box"><strong>Find us</strong><p>Reading town centre, a five-minute walk from the station.</p><p>Step-free entrance · Dogs welcome · Free Wi-Fi</p><p style="color:var(--muted);font-size:.9rem">On a real site this links to Google Maps with the exact address.</p></div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Order ahead</h2>
+  <div class="info">
+    <form class="box" id="f">
+      <label for="drink">Drink<select id="drink"><option>Flat white</option><option>Oat latte</option><option>Espresso</option><option>Batch brew</option></select></label>
+      <label for="time">Collection time<select id="time"><option>In 10 minutes</option><option>In 20 minutes</option><option>In 30 minutes</option></select></label>
+      <label for="nm">Name for the order<input id="nm" required placeholder="e.g. Sam"></label>
+      <button type="submit">Place order</button>
+      <p class="note" id="msg" hidden>This is a demo, so no order was placed. A real site would connect to the café's ordering system.</p>
+    </form>
+    <div class="box"><strong>Why this matters</strong><p>Customers on their way to work can order from their phone and skip the queue. On a real site this connects to a service like Square or Toast.</p></div>
+  </div>
+</section>
+<footer>Ember &amp; Oat (fictional) · Concept site designed by <a href="../index.html">Hashem Almuhtaseb</a></footer>
+</div>
+<script>
+var d=new Date().getDay(),idx=(d+6)%7,rows=document.querySelectorAll('#hours tr');if(rows[idx])rows[idx].className='today';
+var t=rows[idx]?rows[idx].cells[1].textContent:'';document.getElementById('openNow').lastChild.textContent='Open today '+t;
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').hidden=false});
+</script>
+</body>
+</html>
