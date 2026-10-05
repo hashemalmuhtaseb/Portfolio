@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>هاشم المحتسب | تصميم مواقع للمشاريع الصغيرة</title>
+<meta name="description" content="مصمم مواقع مستقل يصمم مواقع سريعة ومناسبة للجوال، بالعربي والإنجليزي، للمقاهي والمطاعم والصالونات والمحلات والحرفيين.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfaf8;--ink:#1d2329;--muted:#5d6670;--line:#e5e2dc;--card:#fff;--accent:#0f6e5a;--accent-ink:#fff;--soft:#eaf3f0}
+*{box-sizing:border-box}
+body{margin:0;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.85}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font-weight:700;text-decoration:none}
+.lang{font-size:.95rem;color:var(--muted)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.4;margin:0 0 14px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:620px;margin:0 0 24px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:700}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:40px 0}
+h2{font-size:1.7rem;margin:0 0 6px}
+.lead{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;display:block}
+.card h3{margin:0 0 6px}
+.card p{margin:0;color:var(--muted)}
+.tag{display:inline-block;background:var(--soft);color:var(--accent);border-radius:999px;padding:2px 12px;font-size:.85rem;margin-bottom:10px}
+.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;padding:0;margin:0}
+.checks li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.checks b{display:block}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px}
+.steps li::before{content:counter(s,arabic-indic);font-weight:700;color:var(--accent);font-size:1.3rem}
+.contact{background:var(--soft);border-radius:20px;padding:28px}
+.contact p{margin:0 0 10px}
+[dir=ltr]{unicode-bidi:isolate}
+footer{padding:28px 0;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.grid,.checks{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">هاشم المحتسب</a><a class="lang" href="../">English</a></div></header>
+<main class="wrap">
+  <div class="hero">
+    <h1>مواقع إلكترونية <span>تجيب الزبائن لبابك</span></h1>
+    <p>أنا هاشم، مصمم مواقع مستقل مقيم في المملكة المتحدة، وأشتغل عن بُعد مع المشاريع الصغيرة: مقاهي، مطاعم، صالونات، محلات، وحرفيين. أصمم مواقع سريعة ومناسبة للجوال، بالعربي أو بالعربي والإنجليزي معًا.</p>
+    <div class="actions"><a class="btn" href="#contact">اطلب فحص مجاني لموقعك</a><a class="btn ghost" href="#work">شوف نماذج من شغلي</a></div>
+  </div>
+
+  <section id="work">
+    <h2>نماذج تجريبية</h2>
+    <p class="lead">مواقع لمشاريع وهمية، تبيّن وش ممكن يكون عند مشروعك أونلاين.</p>
+    <div class="grid">
+      <a class="card" href="cafe/"><span class="tag">مقهى · الرياض</span><h3>دار الهيل</h3><p>قائمة بالأسعار، ساعات العمل، الموقع، وطلب مسبق للاستلام.</p></a>
+      <a class="card" href="barber/"><span class="tag">صالون حلاقة · عمّان</span><h3>صالون حدّ</h3><p>الأسعار، الساعات، وحجز موعد أونلاين خلال دقيقة.</p></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>وش أفحص في كل موقع</h2>
+    <p class="lead">مشاكل بسيطة، لكنها تخلي الزبون يروح لغيرك.</p>
+    <ul class="checks">
+      <li><b>الموقع ما يفتح</b>رابط معطّل في خرائط جوجل أو إنستغرام.</li>
+      <li><b>غير مناسب للجوال</b>نص صغير وأزرار صعبة الضغط.</li>
+      <li><b>بدون شهادة أمان</b>المتصفح يظهر "غير آمن".</li>
+      <li><b>الساعات والأسعار ناقصة</b>الزبون ما يعرف متى يجي ولا بكم.</li>
+      <li><b>بدون نسخة عربية</b>أو عربي بتنسيق مكسور من اليمين لليسار.</li>
+      <li><b>معلومات قديمة</b>سنة حقوق قديمة أو عروض منتهية.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>طريقة الشغل</h2>
+    <ol class="steps">
+      <li><div><b>مكالمة قصيرة</b><br>نتكلم عن مشروعك وزبائنك، بالهاتف أو مكالمة فيديو.</div></li>
+      <li><div><b>تصميم أولي مجاني للصفحة الرئيسية</b><br>تشوف الفكرة قبل أي التزام.</div></li>
+      <li><div><b>البناء والإطلاق</b><br>موقع سريع على نطاقك، مع ربط واتساب وخرائط جوجل.</div></li>
+    </ol>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>تواصل معي</h2>
+      <p>واتساب أو اتصال: <a href="https://wa.me/447385997375" dir="ltr">+44 7385 997375</a></p>
+      <p>البريد: <a href="mailto:hashem.webdesign@gmail.com" dir="ltr">hashem.webdesign@gmail.com</a></p>
+      <p class="lead" style="margin:0">أرد بالعربي أو بالإنجليزي.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© ٢٠٢٦ هاشم المحتسب · تصميم مواقع للمشاريع الصغيرة</div></footer>
+</body>
+</html>
